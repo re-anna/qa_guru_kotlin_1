@@ -1,3 +1,5 @@
+package lesson_2
+
 import io.kotest.matchers.shouldBe
 import io.qameta.allure.Feature
 import io.qameta.allure.Story
