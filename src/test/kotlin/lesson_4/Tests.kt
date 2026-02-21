@@ -28,8 +28,8 @@ class Tests {
     }
 
     @Test
-    fun checkTeacher(){
-        student2.teacher?.let{
+    fun checkTeacher() {
+        student2.teacher?.let {
             println("${student2.name} teacher is $it")
         } ?: run {
             println("${student2.name} has no teacher, please find new one")
