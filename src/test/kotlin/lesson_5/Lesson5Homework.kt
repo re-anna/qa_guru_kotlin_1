@@ -1,5 +1,6 @@
 package lesson_5
 
+import io.kotest.assertions.fail
 import lesson_5.CompanionAssert.Companion.shouldBeUpperCase
 import lesson_5.CompanionAssert.Companion.shouldBeValidNumber
 import org.junit.jupiter.api.DisplayName
@@ -21,16 +22,14 @@ class CompanionAssert {
         infix fun String.shouldBeValidNumber(expected: Boolean) {
             val actual = this.validatePhoneNumber()
             if (actual != expected) {
-                throw AssertionError(
-                    "Номер телефона не прошел валидацию"
-                )
+               fail("Номер телефона не прошел валидацию")
             }
         }
 
         infix fun String.shouldBeUpperCase(expected: Boolean) {
             val actual = this.isUpperCaseText()
             if (actual != expected) {
-                throw AssertionError("Проблема с верхним регистром")
+                fail("Проблема с верхним регистром")
             }
         }
     }
